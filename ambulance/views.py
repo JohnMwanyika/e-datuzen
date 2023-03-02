@@ -5,4 +5,4 @@ from django.utils import timezone
 # Create your views here.
 def all_ambulance(request):
     results = Ambulance.objects.all()
-    return render(request,'ambulance/home.html',{'ambulances':results})
+    return render(request,'home.html',{'ambulances':results})
