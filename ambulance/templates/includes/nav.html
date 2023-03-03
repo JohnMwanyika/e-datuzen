@@ -1,9 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top">
     <div class="container">
   
       <!-- Brand -->
       <a class="navbar-brand" href="index.html">
-        <img src="assets/img/brand.svg" class="navbar-brand-img" alt="...">
+        <img src="{% static 'assets/img/e-datuzen.png' %}" class="navbar-brand-img" alt="...">
       </a>
   
       <!-- Toggler -->
@@ -23,7 +24,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarLandings" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-              Landings
+              Services
             </a>
             <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
               <div class="row gx-0">
@@ -42,7 +43,7 @@
   
                     <!-- Button -->
                     <a href="overview.html" class="btn btn-sm btn-white shadow-dark fonFt-size-sm">
-                      View all pages
+                      View all services
                     </a>
   
                   </div>
@@ -438,8 +439,8 @@
         </ul>
   
         <!-- Button -->
-        <a class="navbar-btn btn btn-sm btn-primary lift ms-auto" href="https://themes.getbootstrap.com/product/landkit/" target="_blank">
-          Buy now
+        <a class="navbar-btn btn btn-sm btn-county-orange lift ms-auto" href="https://themes.getbootstrap.com/product/landkit/" target="_blank">
+          login
         </a>
   
       </div>

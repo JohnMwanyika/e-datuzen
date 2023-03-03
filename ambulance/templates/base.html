@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{% static 'assets/favicon/favicon.ico'%}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'assets/favicon/favicon.ico' %}" type="image/x-icon" />
     
     <!-- Map CSS -->
     {% comment %} <link rel="stylesheet" href="../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" /> {% endcomment %}
     
     <!-- Libs CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/libs.bundle.css'%}" />
+    <link rel="stylesheet" href="{% static 'assets/css/libs.bundle.css' %}" />
     
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/theme.bundle.css'%}" />
+    <link rel="stylesheet" href="{% static 'assets/css/theme.bundle.css' %}" />
     <title>e-datuzen</title>
   </head>
   <body>
@@ -30,7 +30,10 @@
       <div class="shape shape-bottom shape-fluid-x text-dark">
         <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>      </div>
     </div>
+    {% comment %} FAQs {% endcomment %}
     {% include 'includes/faqs.html' %}
+    {% comment %} Call to action {% endcomment %}
+    {% include 'includes/call_to_action.html' %}
     <!-- SHAPE -->
     <div class="position-relative">
         <div class="shape shape-bottom shape-fluid-x text-gray-200">
