@@ -47,11 +47,17 @@
         <div class="container">
           <div class="row">
             {% for scounty in subcounties %}
-            <div class="col-12 col-md-4 hover-effect p-3 m-2" data-aos="fade-up">
+            <div class="col-12 col-md-4 hover-effect p-3 m-2 text-center" data-aos="fade-up">
   
               <!-- Icon -->
-              <div class="icon text-primary mb-3">
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M7 3h10a4 4 0 110 8H7a4 4 0 110-8zm0 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA"/><path d="M7 13h10a4 4 0 110 8H7a4 4 0 110-8zm10 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA" opacity=".3"/></g></svg>            </div>
+            <div class="icon text-success icon-hover mb-3">
+                {% comment %} <i class="bi bi-h-circle"></i> {% endcomment %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-h-circle" viewBox="0 0 16 16">
+                    <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0Zm-5-3.998V12H9.67V8.455H6.33V12H5V4.002h1.33v3.322h3.34V4.002H11Z"/>
+                  </svg>
+                {% comment %} <img src="{% static 'assets/img/icons/ambulance.png' %}"> {% endcomment %}
+                {% comment %} <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M7 3h10a4 4 0 110 8H7a4 4 0 110-8zm0 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA"/><path d="M7 13h10a4 4 0 110 8H7a4 4 0 110-8zm10 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA" opacity=".3"/></g></svg> {% endcomment %}
+            </div>
   
               <!-- Heading -->
               <h3>

@@ -8,6 +8,7 @@ def all_ambulance(request):
     return render(request,'home.html',{'ambulances':results})
 
 def all_Subcounties(request):
+    # results = Sub_counties.obj/ects.all()
     results = Sub_counties.objects.all()
     print(results)
     return render(request,'home.html',{'subcounties':results})
