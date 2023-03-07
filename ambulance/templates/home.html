@@ -27,7 +27,7 @@
           <!-- Buttons -->
           <div class="text-center text-md-start mb-lg-4">
             <a href="#availbale" class="btn btn-county-orange shadow lift me-1">
-              View available <i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
+              Find ambulance <i class="fe fe-arrow-right d-none d-md-inline ms-3"></i>
             </a>
             <a href="docs/index.html" class="btn btn-primary-soft lift">Driver login</a>
           </div>
@@ -52,17 +52,20 @@
             </div>
             <!-- Heading -->
             <h3>{{ hos.sub_county }}</h3>
+            {% if hos.ambulance_set.all %}
+              <div class="list-group">
+                {% for ambulance in hos.ambulance_set.all %}
+                    <a href="#"
+                      class="list-group-item list-group-item-action ambulance text-primary fs-6">
+                      <span class="float-start">{{ forloop.counter }}</span>{{ ambulance }} {{ ambulance.no_plate }} {{ ambulance.hospital }} {% if ambulance.requested %}<span><i class="bi bi-x-circle-fill text-danger"></i></span>{% else %}<span><i class="bi bi-check-circle-fill text-success"></i></span>{% endif %}</a>
+                {% endfor %}
+                <!-- <a class="list-group-item list-group-item-action disabled">A disabled link item</a> -->
+              </div>
+            {% else %}
             <div class="list-group">
-              {% for ambulance in hos.ambulance_set.all %}
-                {% if ambulance  %}
-                  <a href="#"
-                     class="list-group-item list-group-item-action ambulance text-primary fs-6"><span class="float-start">{{ forloop.counter }}</span>{{ ambulance }} {{ ambulance.no_plate }} {{ ambulance.hospital }} {% if ambulance.requested %}<span><i class="bi bi-x-circle-fill text-danger"></i></span>{% else %}<span><i class="bi bi-check-circle-fill text-success"></i></span>{% endif %}</a>
-                {% else %}
-                  <p>No ambulances at the moment</p>
-                {% endif %}
-              {% endfor %}
-              <!-- <a class="list-group-item list-group-item-action disabled">A disabled link item</a> -->
+              <a href="" class="list-group-item list-group-item-action ambulance text-primary fs-6">No registered ambulances at the moment</a>
             </div>
+            {% endif %}
             <!-- Text -->
             <p class="text-muted mb-6 mb-md-0">
               <!-- Landkit is built to make your life easier. -->

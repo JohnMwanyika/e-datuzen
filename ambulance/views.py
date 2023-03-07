@@ -10,10 +10,10 @@ def all_ambulance(request):
 def all_Subcounties(request):
     # scounties = Sub_counties.objects.all().select_related('hospitals')
 
-    hospitals = Hospital.objects.all().select_related('sub_county')
+    hospitals = Hospital.objects.all()
     # related_hospitals  = Hospital.objects.filter(sub_county=hospitals.sub_county)
 
-    print(hospitals)
+    # print(hospitals.ambulance_set.all)
 
     # return render(request,'home.html',{'hospitals':hospitals})
     return render(request,'home.html',{'hospitals':hospitals})
