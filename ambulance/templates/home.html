@@ -39,7 +39,8 @@
   </section>
   <!-- FEATURES -->
   <section id="availbale" class="py-8 py-md-11 bg-light border-bottom">
-    <h1 class="text-center text-county-orange border-bottom" data-aos="fade-up">Find Ambulance in</h1>
+    <h1 class="text-center text-county-orange border-bottom"
+        data-aos="fade-up">Find Ambulance in</h1>
     <div class="container">
       <div class="row">
         {% for hos in hospitals %}
@@ -54,17 +55,17 @@
             <div class="list-group">
               {% for ambulance in hos.ambulance_set.all %}
                 {% if ambulance  %}
-                  <a href="#" class="list-group-item list-group-item-action ambulance text-primary"><span class="float-start">{{ forloop.counter }}</span>{{ ambulance }} {{ ambulance.no_plate }} {{ ambulance.hospital }}</a>
+                  <a href="#"
+                     class="list-group-item list-group-item-action ambulance text-primary fs-6"><span class="float-start">{{ forloop.counter }}</span>{{ ambulance }} {{ ambulance.no_plate }} {{ ambulance.hospital }} {% if ambulance.requested %}<span><i class="bi bi-x-circle-fill text-danger"></i></span>{% else %}<span><i class="bi bi-check-circle-fill text-success"></i></span>{% endif %}</a>
                 {% else %}
                   <p>No ambulances at the moment</p>
                 {% endif %}
               {% endfor %}
               <!-- <a class="list-group-item list-group-item-action disabled">A disabled link item</a> -->
             </div>
-
             <!-- Text -->
             <p class="text-muted mb-6 mb-md-0">
-              Landkit is built to make your life easier.
+              <!-- Landkit is built to make your life easier. -->
             </p>
           </div>
         {% endfor %}
