@@ -36,7 +36,9 @@
 </section>
 <!-- FEATURES -->
 <section id="availbale" class="py-8 py-md-11 bg-light border-bottom outline">
-  <h1 class="text-center text-county-orange border-bottom myfont" style="font-weight: 700;" data-aos="fade-up">Find Ambulance in</h1>
+  <h1 class="text-center text-county-orange border-bottom myfont" style="font-weight: 700" data-aos="fade-up">
+    Find Ambulance in
+  </h1>
   <div class="container">
     <div class="row">
       {% for hos in hospitals %}
@@ -50,13 +52,10 @@
         </div>
         <!-- Heading -->
         <h3 class="myfont" style="font-size: 16px;">{{ hos.sub_county }}</h3>
-
-        <p class="text-muted mb-6 mb-md-0">Ambulances near {{hos.sub_county}}.</p>
-
-        <a href="" data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{ hos.id }}"
-          class="btn btn-success shadow p-1 lift me-1 btn-scounty{{ hos.id }} animate__animated animate__zoomIn">Request <i
-            class="bi bi-arrow-right-circle"></i></a>
-        {% include 'includes/ambulance_request_modal.html' %}
+        <p class="text-muted mb-6 mb-md-0">Ambulances near {{ hos.sub_county }}.</p>
+        <a href="" data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#modalExample{{ hos.id }}"
+          class="btn btn-success shadow p-1 lift me-1 btn-scounty{{ hos.id }} animate__animated animate__zoomIn">Request
+          <i class="bi bi-arrow-right-circle"></i></a>
         <!-- {% if hos.ambulance_set.all %}
               <div class="list-group">
                 {% for ambulance in hos.ambulance_set.all %}
@@ -82,7 +81,15 @@
             // }
           );
         });
+        $('#staticBackdrop{{ hos.id }}').appendTo("body")
       </script>
+      <!-- <div class="card">
+        <div class="card-body">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalExample">Launch demo
+            modal</button>
+        </div>
+      </div> -->
+      {% include 'includes/ambulance_request_modal.html' %}
       {% endfor %}
     </div>
     <!-- / .row -->

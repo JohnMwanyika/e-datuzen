@@ -34,16 +34,20 @@
       .ambulance {
           padding: 5px;
       }
+
+      .modal {
+          background: rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-backdrop {
+          display: none;
+      }
     </style>
     <!-- <script>
-   $(document).ready(function() {
-       $(".scounty{{hos.id}}").hover(function() {
-           $('.btn-scounty').css("display", "block");
-       }, function() {
-           $('.btn-scounty{{hos.id}}').css("display", "none");
-       });
-   });
- </script> -->
+      $('.modal-dialog').parent().on('show.bs.modal', function(e) {
+          $(e.relatedTarget.attributes['data-target'].value).appendTo('body');
+      })
+    </script> -->
   </head>
   <body>
     {% include 'includes/nav.html' %}

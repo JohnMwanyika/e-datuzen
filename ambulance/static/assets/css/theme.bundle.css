@@ -26692,7 +26692,7 @@ a.card:hover {
 
 }
 
-.ribbon{
+.ribbon {
     -webkit-box-shadow: 0px 4px 5px -5px rgba(0, 187, 90, 1);
     -moz-box-shadow: 0px 4px 5px -5px rgba(0, 187, 90, 1);
     box-shadow: 0px 4px 5px -5px rgba(0, 187, 90, 1);
@@ -26703,14 +26703,26 @@ a.card:hover {
     scroll-behavior: smooth;
 }
 
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-18 {
+    font-size: 18px;
+}
 
-.myfont{
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.myfont {
     font-family: 'Ubuntu', sans-serif;
 }
-._sm{
+
+._sm {
     font-family: 'Gloock', serif;
 }
