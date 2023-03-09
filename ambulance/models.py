@@ -46,3 +46,20 @@ class Ambulance(models.Model):
 
     def __str__(self):
         return self.body
+
+class EmergencyCartegory(models.Model):
+    name = models.CharField(max_length=255)
+    decription = models.TextField(null=True)
+
+    def __str__(self):
+        return self.name
+
+class Emergency(models.Model):
+    contact_person_phone = models.IntegerField()
+    location = models.CharField(max_length=255)
+    cartegory = models.ForeignKey(EmergencyCartegory,on_delete=models.CASCADE)
+    description = models.TextField(null=True)
+    reported_at = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.description

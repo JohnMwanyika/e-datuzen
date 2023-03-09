@@ -1,19 +1,10 @@
 <!-- Modal -->
-<!-- <div class="modal fade"
-     id="staticBackdrop{{hos.id}}"
-     data-bs-backdrop="static"
-     data-bs-keyboard="false"
-     tabindex="-1"
-     aria-labelledby="staticBackdropLabel"
-     aria-hidden="true">
+<!-- <div class="modal fade" id="staticBackdrop{{hos.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Request Ambulance arround {{hos.sub_county}}</h1>
-                <button type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">...</div>
             <div class="modal-footer">
@@ -23,85 +14,61 @@
         </div>
     </div>
 </div> -->
-
-<div class="modal fade" id="modalExample{{hos.id}}" tabindex="-1" role="dialog" aria-labelledby="modalExampleTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-  
-          <!-- Close -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-  
-          <!-- Image -->
-          <div class="text-center">
-            <img src="../assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3" style="width: 200px;">
+<div class="modal fade" id="modalExample{{ hos.id }}" tabindex="-1" role="dialog" aria-labelledby="modalExampleTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- Close -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Image -->
+        <!-- <div class="text-center">
+          <img src="../assets/img/illustrations/illustration-1.png" alt="..." class="img-fluid mb-3"
+            style="width: 200px">
+        </div> -->
+        <!-- Heading -->
+        <h2 class="fw-bold text-center mb-1 myfont" id="modalExampleTitle">Ambulance in {{ hos.sub_county }}</h2>
+        <!-- Text -->
+        <!-- <p class="fs-lg text-center text-dark mb-6 mb-md-8">We can help you solve company communication.</p> -->
+        <!-- Form -->
+        <form class="mt-2">
+          <div class="form-group">
+            <label class="form-label" for="exampleInputEmail1">Contact Person Phone</label>
+            <input class="form-control form-control-sm" id="exampleInputEmail1" type="tell"
+              placeholder="e.g 0712345...">
           </div>
-  
-          <!-- Heading -->
-          <h2 class="fw-bold text-center mb-1" id="modalExampleTitle">
-            Request ambulance arround {{hos.sub_county}}
-          </h2>
-  
-          <!-- Text -->
-          <p class="fs-lg text-center text-muted mb-6 mb-md-8">
-            We can help you solve company communication.
-          </p>
-  
-          <!-- Form -->
-          <form>
-            <div class="row">
-              <div class="col-12 col-md-6">
-  
-                <!-- First name -->
-                <div class="form-floating">
-                  <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First name">
-                  <label for="registrationFirstNameModal">First name</label>
+          <div class="form-group">
+            <label class="form-label" for="exampleInputPassword1">Location</label>
+            <input class="form-control form-control-sm" id="exampleInputPassword1" type="text"
+              placeholder="e.g Caltext">
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <form-group>
+                <label class="form-label" for="exampleInputPassword1">Cartegory</label>
+                <select class="form-select" aria-label="Default select example">
+                  <!-- <option selected>Open this select menu</option> -->
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                </form-group">
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <div class="mb-3">
+                  <label for="descriptiontxtArea" class="form-label">Brief description</label>
+                  <textarea class="form-control" placeholder="e.g 2 victims with fractures" id="descriptiontxtArea"></textarea>
                 </div>
-  
-              </div>
-              <div class="col-12 col-md-6">
-  
-                <!-- Last name -->
-                <div class="form-floating">
-                  <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last name">
-                  <label for="registrationLastNameModal">Last name</label>
-                </div>
-  
               </div>
             </div>
-            <div class="row">
-              <div class="col-12 col-md-6">
-  
-                <!-- Email -->
-                <div class="form-floating">
-                  <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email">
-                  <label for="registrationEmailModal">Email</label>
-                </div>
-  
-              </div>
-              <div class="col-12 col-md-6">
-  
-                <!-- Password -->
-                <div class="form-floating">
-                  <input type="password" class="form-control form-control-flush" id="registrationPasswordModal" placeholder="Password">
-                  <label for="registrationPasswordModal">Password</label>
-                </div>
-  
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-  
-                <!-- Submit -->
-                <button class="btn w-100 btn-primary mt-3 lift">
-                  Call mbulance <i class="bi bi-telephone-outbound-fill"></i>
-                </button>
-  
-              </div>
-            </div>
-          </form>
-  
-        </div>
+          </div>
+
+
+          <button type="submit" class="btn btn-success w-100 p-1 mt-3">Call <i
+              class="bi bi-telephone-outbound-fill"></i></button>
+        </form>
       </div>
     </div>
   </div>
+</div>
