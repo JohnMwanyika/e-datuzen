@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Hospital, Sub_counties, Ambulance,Counties
 from django.utils import timezone
+from .forms import AmbulanceRequestForm
 # Create your views here.
 def all_ambulance(request):
     results = Ambulance.objects.all()
@@ -9,11 +10,11 @@ def all_ambulance(request):
 
 def all_Subcounties(request):
     # scounties = Sub_counties.objects.all().select_related('hospitals')
-
+    form = AmbulanceRequestForm()
     hospitals = Hospital.objects.all()
-    # related_hospitals  = Hospital.objects.filter(sub_county=hospitals.sub_county)
+    return render(request,'home.html',{'hospitals':hospitals,'form':form})
 
-    # print(hospitals.ambulance_set.all)
-
-    # return render(request,'home.html',{'hospitals':hospitals})
-    return render(request,'home.html',{'hospitals':hospitals})
+# request ambulance
+def request_ambulance(request):
+    form = AmbulanceRequestForm()
+    return render

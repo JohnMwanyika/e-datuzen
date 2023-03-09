@@ -55,7 +55,7 @@ class EmergencyCartegory(models.Model):
         return self.name
 
 class Emergency(models.Model):
-    contact_person_phone = models.IntegerField()
+    contact_phone = models.IntegerField()
     location = models.CharField(max_length=255)
     cartegory = models.ForeignKey(EmergencyCartegory,on_delete=models.CASCADE)
     description = models.TextField(null=True)

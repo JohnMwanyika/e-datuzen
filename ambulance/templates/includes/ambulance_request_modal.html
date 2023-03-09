@@ -34,20 +34,21 @@
         <form class="mt-2">
           <div class="form-group">
             <label class="form-label" for="exampleInputEmail1">Contact Person Phone</label>
-            <input class="form-control form-control-sm" id="exampleInputEmail1" type="tell"
-              placeholder="e.g 0712345...">
+            <!-- <input class="form-control form-control-sm" id="exampleInputEmail1" type="tell"
+              placeholder="e.g 0712345..."> -->
+            {{form.contact_phone}}
           </div>
           <div class="form-group">
             <label class="form-label" for="exampleInputPassword1">Location</label>
-            <input class="form-control form-control-sm" id="exampleInputPassword1" type="text"
-              placeholder="e.g Caltext">
+            <!-- <input class="form-control form-control-sm" id="exampleInputPassword1" type="text"
+              placeholder="e.g Caltext"> -->
+            {{form.location}}
           </div>
           <div class="row">
             <div class="col-lg-6">
               <form-group>
                 <label class="form-label" for="exampleInputPassword1">Cartegory</label>
                 <select class="form-select" aria-label="Default select example">
-                  <!-- <option selected>Open this select menu</option> -->
                   <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
@@ -58,7 +59,8 @@
               <div class="form-group">
                 <div class="mb-3">
                   <label for="descriptiontxtArea" class="form-label">Brief description</label>
-                  <textarea class="form-control" placeholder="e.g 2 victims with fractures" id="descriptiontxtArea"></textarea>
+                  <!-- <textarea class="form-control" placeholder="e.g 2 victims with fractures" id="descriptiontxtArea"></textarea> -->
+                  {{form.description}}
                 </div>
               </div>
             </div>
