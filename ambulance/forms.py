@@ -14,5 +14,5 @@ class AmbulanceRequestForm(forms.ModelForm):
             'contact_phone':forms.TextInput(attrs={'class':'form-control','placeholder':'e.g 07123...'}),
             'location':forms.TextInput(attrs={'class':'form-control','placeholder':'e.g Caltex'}),
             'cartegory':forms.TextInput(attrs={'class':'form-select'}),
-            'description':forms.TextInput(attrs={'class':'form-control','placeholder':'e.g 2 casualties'})
+            'description':forms.TextInput(attrs={'class':'form-control','placeholder':'e.g 2 casualties','id':'descriptiontxtArea'})
         }
