@@ -39,6 +39,7 @@
   <h1 class="text-center text-county-orange border-bottom myfont" style="font-weight: 700" data-aos="fade-up">
     Find Ambulance in
   </h1>
+  <h1>{{ error_message }}</h1>
   <div class="container">
     <div class="row">
       {% for hos in hospitals %}
@@ -56,19 +57,6 @@
         <a href="" data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#modalExample{{ hos.id }}"
           class="btn btn-success shadow p-1 lift me-1 btn-scounty{{ hos.id }} animate__animated animate__zoomIn">Request
           <i class="bi bi-arrow-right-circle"></i></a>
-        <!-- {% if hos.ambulance_set.all %}
-              <div class="list-group">
-                {% for ambulance in hos.ambulance_set.all %}
-                    <a href="#" class="list-group-item list-group-item-action ambulance text-primary fs-6">
-                      <span class="float-start">{{ forloop.counter }}</span>{{ ambulance }} {{ ambulance.no_plate }} {{ ambulance.hospital }} {% if ambulance.requested %}<span><i class="bi bi-x-circle-fill text-danger"></i></span>{% else %}<span><i class="bi bi-check-circle-fill text-success"></i></span>{% endif %}</a>
-                {% endfor %}
-              </div>
-            {% else %}
-            <div class="list-group">
-              <a href="" class="disabled list-group-item list-group-item-action ambulance text-primary fs-6">No registered ambulances at the moment</a>
-            </div>
-            {% endif %} -->
-        <!-- Text -->
       </div>
       <script>
         $(document).ready(function () {
@@ -83,12 +71,6 @@
         });
         $('#staticBackdrop{{ hos.id }}').appendTo("body")
       </script>
-      <!-- <div class="card">
-        <div class="card-body">
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalExample">Launch demo
-            modal</button>
-        </div>
-      </div> -->
       {% include 'includes/ambulance_request_modal.html' %}
       {% endfor %}
     </div>

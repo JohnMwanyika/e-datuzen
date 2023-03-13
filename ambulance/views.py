@@ -10,11 +10,35 @@ def all_ambulance(request):
 
 def all_Subcounties(request):
     # scounties = Sub_counties.objects.all().select_related('hospitals')
-    form = AmbulanceRequestForm()
-    hospitals = Hospital.objects.all()
-    return render(request,'home.html',{'hospitals':hospitals,'form':form})
+    if request.method == 'POST':
+        print('Posting data')
+        emergency = AmbulanceRequestForm(request.POST)
+        if emergency.is_valid():
+            emergency.save()
+            return redirect('ambulance:all_ambulance')
+        else:
+            form = AmbulanceRequestForm()
+            hospitals = Hospital.objects.all()
+            return render(request,'home.html',{'hospitals':hospitals,'form':form,'error_message':'Form not submited'})
+        # if emergency.is_valid():
+        #     print('form is valid')
+        #     emergency.save()
+        # return redirect('/ambulance')
+    else:
+        form = AmbulanceRequestForm()
+        hospitals = Hospital.objects.all()
+        return render(request,'home.html',{'hospitals':hospitals,'form':form})
 
 # request ambulance
 def request_ambulance(request):
-    form = AmbulanceRequestForm()
-    return render
+    # form = AmbulanceRequestForm()
+    if request.method == 'POST':
+        print('Posting data')
+        emergency = AmbulanceRequestForm(request.POST)
+        if emergency.is_valid():
+            print('form is valid')
+            emergency.save()
+            # return redirect('/ambulance')
+    else:
+        form = AmbulanceRequestForm()
+    return redirect('ambulance:all_ambulance')
